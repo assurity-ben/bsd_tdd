@@ -15,107 +15,110 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-// Feel free to rename this class 
-public class PlanTest {
-	@Test
+public class BillingTest {
+    private static final Plan nullPlan = new Plan(0, 0, 0, 0);
+    private static final Plan goldPlan = new Plan(49.95, 14.50, 0.45, 1000);
+    private static final Plan silverPlan = new Plan(29.95, 21.50, 0.54, 500);
+
+    @Test
     public void noPlan() {
-        Plan account = new Plan();
+        Account account = new Account(0, 0, nullPlan);
         assertEquals(0.0, account.calculateBill(), 0);
     }
 
     @Test
     public void goldOneLine() {
-        Plan account = new Plan("Gold", 1);
+        Account account = new Account(1, 0, goldPlan);
         assertEquals(49.95, account.calculateBill(), 0.001);
     }
 
     @Test
     public void goldTwoLines() {
-        Plan account = new Plan("Gold", 2);
+        Account account = new Account(2, 0, goldPlan);
         assertEquals(64.45, account.calculateBill(), 0.001);
     }
 
     @Test
     public void silverOneLine() {
-        Plan account = new Plan("Silver", 1);
+        Account account = new Account(1, 0, silverPlan);
         assertEquals(29.95, account.calculateBill(), 0.001);
     }
 
     @Test
     public void silverThreeLines() {
-        Plan account = new Plan("Silver", 3);
+        Account account = new Account(3, 0, silverPlan);
         assertEquals(72.95, account.calculateBill(), 0.001);
     }
 
     @Test
     public void goldWithinIncludedMinutes() {
-        Plan account = new Plan("Gold", 1, 999);
+        Account account = new Account(1, 999, goldPlan);
         assertEquals(49.95, account.calculateBill(), 0.001);
     }
 
     @Test
     public void goldExactlyIncludedMinutes() {
-        Plan account = new Plan("Gold", 1, 1000);
+        Account account = new Account(1, 1000, goldPlan);
         assertEquals(49.95, account.calculateBill(), 0.001);
     }
 
     @Test
     public void goldOverOneMinute() {
-        Plan account = new Plan("Gold", 1, 1001);
+        Account account = new Account(1, 1001, goldPlan);
         assertEquals(50.40, account.calculateBill(), 0.001);
     }
 
     @Test
     public void goldOverTenMinutes() {
-        Plan account = new Plan("Gold", 1, 1010);
+        Account account = new Account(1, 1010, goldPlan);
         assertEquals(54.45, account.calculateBill(), 0.001);
     }
 
     @Test
     public void silverWithinIncludedMinutes() {
-        Plan account = new Plan("Silver", 1, 499);
+        Account account = new Account(1, 499, silverPlan);
         assertEquals(29.95, account.calculateBill(), 0.001);
     }
 
     @Test
     public void silverExactlyIncludedMinutes() {
-        Plan account = new Plan("Silver", 1, 500);
+        Account account = new Account(1, 500, silverPlan);
         assertEquals(29.95, account.calculateBill(), 0.001);
     }
 
     @Test
     public void silverOverTwentyMinutes() {
-        Plan account = new Plan("Silver", 1, 520);
+        Account account = new Account(1, 520, silverPlan);
         assertEquals(40.75, account.calculateBill(), 0.001);
     }
 
     @Test
     public void goldTwoLinesWithinIncludedMinutes() {
-        Plan account = new Plan("Gold", 2, 999);
+        Account account = new Account(2, 999, goldPlan);
         assertEquals(64.45, account.calculateBill(), 0.001);
     }
 
     @Test
     public void goldThreeLinesWithinIncludedMinutes() {
-        Plan account = new Plan("Gold", 3, 999);
+        Account account = new Account(3, 999, goldPlan);
         assertEquals(78.95, account.calculateBill(), 0.001);
     }
 
     @Test
     public void goldFourLinesWithinIncludedMinutes() {
-        Plan account = new Plan("Gold", 4, 999);
+        Account account = new Account(4, 999, goldPlan);
         assertEquals(83.95, account.calculateBill(), 0.001);
     }
 
     @Test
     public void silverFourLinesWithinIncludedMinutes() {
-        Plan account = new Plan("Silver", 4, 499);
+        Account account = new Account(4, 499, silverPlan);
         assertEquals(77.95, account.calculateBill(), 0.001);
     }
 
     @Test
     public void silverFiveLinesWithinIncludedMinutes() {
-        Plan account = new Plan("Silver", 5, 499);
+        Account account = new Account(5, 499, silverPlan);
         assertEquals(82.95, account.calculateBill(), 0.001);
     }
 }

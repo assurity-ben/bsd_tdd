@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d0b9bfb-cab7-4085-840f-be5bc602cacb" name="Changes" comment="" />
+    <list default="true" id="1d0b9bfb-cab7-4085-840f-be5bc602cacb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/wildwestwireless/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WildWestWireless-Problem-Java.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/WildWestWireless-Problem-Java.ipr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WildWestWireless-Problem-Java.iws" beforeDir="false" afterPath="$PROJECT_DIR$/WildWestWireless-Problem-Java.iws" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/wildwestwireless/Plan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wildwestwireless/Plan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/wildwestwireless/PlanType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/wildwestwireless/PlanTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/wildwestwireless/BillingTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,10 +24,14 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2EmmqJSK60TNYlMi6aJg0pWJfOu" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -28,7 +39,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "settings.editor.selected.configurable": "editor.preferences.completion"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -36,32 +48,32 @@
       <recent name="com.wildwestwireless" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PlanTest">
-    <configuration name="PlanTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.BillingTest">
+    <configuration name="BillingTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="WildWestWireless-Problem-Java" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.wildwestwireless.*" />
+          <option name="PATTERN" value="com.wildwestwireless.BillingTest" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.wildwestwireless" />
-      <option name="MAIN_CLASS_NAME" value="com.wildwestwireless.PlanTest" />
+      <option name="MAIN_CLASS_NAME" value="com.wildwestwireless.BillingTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PlanTest.testBill" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BillingTest.testBill" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="WildWestWireless-Problem-Java" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.wildwestwireless.*" />
+          <option name="PATTERN" value="com.wildwestwireless.BillingTest" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.wildwestwireless" />
-      <option name="MAIN_CLASS_NAME" value="com.wildwestwireless.PlanTest" />
+      <option name="MAIN_CLASS_NAME" value="com.wildwestwireless.BillingTest" />
       <option name="METHOD_NAME" value="testBill" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -70,8 +82,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PlanTest" />
-        <item itemvalue="JUnit.PlanTest.testBill" />
+        <item itemvalue="JUnit.BillingTest" />
+        <item itemvalue="JUnit.BillingTest.testBill" />
       </list>
     </recent_temporary>
   </component>
@@ -85,6 +97,17 @@
       <updated>1663209323074</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/WildWestWireless_Problem_Java$PlanTest.ic" NAME="PlanTest Coverage Results" MODIFIED="1663215143433" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
