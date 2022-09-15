@@ -16,9 +16,9 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 public class BillingTest {
-    private static final Plan nullPlan = new Plan(0, 0, 0, 0);
     private static final Plan goldPlan = new Plan(49.95, 14.50, 0.45, 1000);
     private static final Plan silverPlan = new Plan(29.95, 21.50, 0.54, 500);
+    private static final Plan nullPlan = new Plan(0, 0, 0, 0);
 
     @Test
     public void noPlan() {
